@@ -4,7 +4,7 @@ import { defineConfig } from 'vitest/config'
 export default defineConfig({
   resolve: {
     alias: {
-      '@kriszu/hooks': resolve(__dirname, 'packages/core/index.ts')
+      '@kriszu/hooks': resolve(__dirname, 'packages/core/index.ts'),
     },
     dedupe: [
       'vue',
