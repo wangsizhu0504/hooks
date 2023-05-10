@@ -1,0 +1,9 @@
+{
+  "useClipboard": "956 B",
+  "useTitle": "823 B",
+  "useMutationObserver": "508 B",
+  "useEventListener": "449 B",
+  "useTimeout": "296 B",
+  "useState": "107 B",
+  "defaultWindow": "85 B"
+}
