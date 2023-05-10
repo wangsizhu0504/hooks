@@ -2,29 +2,30 @@ import type { ComputedRef, Ref } from 'vue-demi'
 import { watch } from 'vue-demi'
 import type { MaybeRef, MaybeRefOrGetter, ReadonlyRefOrGetter } from '../types'
 import { useMutationObserver } from '../useMutationObserver'
-import { isClient, toRef, toValue } from '../utils'
+import { isClient, toValue } from '../utils'
+import { toRef } from '../toRef'
 
 const defaultDocument = isClient ? window.document : undefined
 
 export type UseTitleOptionsBase =
-{
-  /**
-   * Observe `document.title` changes using MutationObserve
-   * Cannot be used together with `titleTemplate` option.
-   *
-   * @default false
-   */
-  observe?: boolean
-}
-| {
-  /**
-   * The template string to parse the title (e.g., '%s | My Website')
-   * Cannot be used together with `observe` option.
-   *
-   * @default '%s'
-   */
-  titleTemplate?: MaybeRef<string> | ((title: string) => string)
-}
+  {
+    /**
+     * Observe `document.title` changes using MutationObserve
+     * Cannot be used together with `titleTemplate` option.
+     *
+     * @default false
+     */
+    observe?: boolean
+  }
+  | {
+    /**
+     * The template string to parse the title (e.g., '%s | My Website')
+     * Cannot be used together with `observe` option.
+     *
+     * @default '%s'
+     */
+    titleTemplate?: MaybeRef<string> | ((title: string) => string)
+  }
 
 export type UseTitleOptions = {
   /*

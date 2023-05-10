@@ -1,9 +1,9 @@
-import type { Arrayable, Fn, MaybeRefOrGetter } from '@vueuse/shared'
-import { noop, toValue, tryOnScopeDispose } from '@vueuse/shared'
 import { watch } from 'vue-demi'
+import type { Arrayable, Fn, MaybeRefOrGetter } from '../types'
+
 import type { MaybeElementRef } from '../unrefElement'
 import { unrefElement } from '../unrefElement'
-import { isClient } from '../utils'
+import { isClient, noop, toValue, tryOnScopeDispose } from '../utils'
 
 const defaultWindow = isClient ? window : undefined
 
@@ -24,7 +24,6 @@ export interface GeneralEventListener<E = Event> {
  *
  * Overload 1: Omitted Window target
  *
- * @see https://vueuse.org/useEventListener
  * @param event
  * @param listener
  * @param options

@@ -1,5 +1,7 @@
 import type { ComputedRef, Ref } from 'vue-demi'
 
+export type Arrayable<T> = T[] | T
+
 /**
  * Maybe it's a ref, or a plain value
  *

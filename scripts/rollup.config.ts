@@ -42,6 +42,7 @@ function esbuildMinifer(options: ESBuildOptions) {
 for (const pkgName of packages) {
   const iifeGlobals = {
     'vue-demi': 'VueDemi',
+    '@kriszu/hooks': 'KriszuHooks',
   }
   const input = `packages/${pkgName}/index.ts`
 
@@ -57,6 +58,7 @@ for (const pkgName of packages) {
     {
       file: `packages/${pkgName}/dist/index.iife.js`,
       format: 'iife',
+      name: 'KriszuHooks',
       extend: true,
       globals: iifeGlobals,
       plugins: [
@@ -66,6 +68,7 @@ for (const pkgName of packages) {
     {
       file: `packages/${pkgName}/dist/index.iife.min.js`,
       format: 'iife',
+      name: 'KriszuHooks',
       extend: true,
       globals: iifeGlobals,
       plugins: [

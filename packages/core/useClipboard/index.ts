@@ -1,8 +1,8 @@
 /* this implementation is original ported from https://github.com/logaretm/vue-use-web by Abdelrahman Awad */
 
-import { useTimeout } from '@kriszu/hooks'
 import type { ComputedRef, Ref } from 'vue-demi'
 import { computed, ref } from 'vue-demi'
+import { useTimeout } from '../useTimeout'
 import { isClient, toValue } from '../utils'
 import type { MaybeRefOrGetter } from '../types'
 import type { WindowEventName } from '../useEventListener'
@@ -51,7 +51,6 @@ export interface UseClipboardReturn<Optional> {
 /**
  * Reactive Clipboard API.
  *
- * @see https://vueuse.org/useClipboard
  * @param options
  */
 export function useClipboard(options?: UseClipboardOptions<undefined>): UseClipboardReturn<false>
