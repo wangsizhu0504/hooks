@@ -38,17 +38,17 @@ describe('useState', () => {
 
   it('should receive function', () => {
     const result = useState(() => 'react')
-    const [state, setState] = result
+    const [type, setType] = result
     expect(Array.isArray(result)).toBe(true)
     expect(result.length).toBe(2)
 
-    expect(typeof setState).toBe('function')
-    expect(isRef(state)).toBe(true)
+    expect(typeof setType).toBe('function')
+    expect(isRef(type)).toBe(true)
 
-    expect(unref(state)).toBe('react')
+    expect(unref(type)).toBe('react')
 
-    setState('vue')
+    setType('vue')
 
-    expect(unref(state)).toBe('vue')
+    expect(unref(type)).toBe('vue')
   })
 })
