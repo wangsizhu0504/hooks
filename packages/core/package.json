@@ -34,5 +34,8 @@
   "module": "./index.mjs",
   "unpkg": "./index.min.js",
   "jsdelivr": "./index.min.js",
-  "types": "./index.d.ts"
+  "types": "./index.d.ts",
+  "dependencies": {
+    "vue-demi": ">=0.14.0"
+  }
 }

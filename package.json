@@ -1,20 +1,23 @@
 {
+  "name": "@kriszu/monorepo",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@8.5.0",
+  "packageManager": "pnpm@8.3.1",
   "author": "Kriszu <wangsizhu0504@outlook.com>",
   "license": "MIT",
   "scripts": {
+    "build": "esno scripts/build.ts",
+    "build:rollup": "NODE_OPTIONS=\"--max-old-space-size=6144\" rollup -c",
+    "build:types": "tsc --emitDeclarationOnly && npm run types:fix",
+    "clean": "rimraf dist types \"packages/*/dist\"",
     "commit": "czg",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest",
     "prepare": "husky install",
-    "type:check": "vue-tsc --noEmit --skipLibCheck"
-  },
-  "peerDependencies": {
-    "vue": ">=3.2.47"
+    "type:check": "vue-tsc --noEmit --skipLibCheck",
+    "types:fix": "esno scripts/fix-types.ts"
   },
   "devDependencies": {
     "@kriszu/eslint-config": "^1.0.11",
@@ -48,7 +51,14 @@
     "typescript": "5.0.4",
     "vite": "^4.3.3",
     "vitepress": "1.0.0-alpha.75",
-    "vitest": "^0.30.1"
+    "vitest": "^0.30.1",
+    "vue": "^3.2.47",
+    "vue2": "npm:vue@^2.7.14"
+  },
+  "pnpm": {
+    "overrides": {
+      "vue-demi": "0.14.0"
+    }
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
