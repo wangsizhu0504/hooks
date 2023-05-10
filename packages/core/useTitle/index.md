@@ -10,7 +10,7 @@ Reactive document title.
 ## Usage
 
 ```js
-import { useTitle } from '@vueuse/core'
+import { useTitle } from '@kriszu/hooks'
 
 const title = useTitle()
 console.log(title.value) // print current title
@@ -26,7 +26,7 @@ const title = useTitle('New Title')
 Pass a `ref` and the title will be updated when the source ref changes:
 
 ```js
-import { useTitle } from '@vueuse/core'
+import { useTitle } from '@kriszu/hooks'
 
 const messages = ref(0)
 

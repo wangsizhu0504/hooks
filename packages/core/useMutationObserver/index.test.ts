@@ -1,5 +1,5 @@
-import { promiseTimeout } from '@vueuse/shared'
 import { describe, expect, it, vi } from 'vitest'
+import { promiseTimeout } from '../utils'
 import { useMutationObserver } from '.'
 
 describe('useMutationObserver', () => {

@@ -1,5 +1,5 @@
-import { tryOnScopeDispose } from '@vueuse/shared'
 import { computed, watch } from 'vue-demi'
+import { tryOnScopeDispose } from '../utils'
 import type { MaybeElementRef } from '../unrefElement'
 import { unrefElement } from '../unrefElement'
 import { isClient } from '../utils/is'

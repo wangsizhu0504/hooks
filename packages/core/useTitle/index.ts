@@ -1,9 +1,8 @@
-import type { MaybeRef, MaybeRefOrGetter, ReadonlyRefOrGetter } from '@vueuse/shared'
-import { toRef, toValue } from '@vueuse/shared'
 import type { ComputedRef, Ref } from 'vue-demi'
 import { watch } from 'vue-demi'
+import type { MaybeRef, MaybeRefOrGetter, ReadonlyRefOrGetter } from '../types'
 import { useMutationObserver } from '../useMutationObserver'
-import { isClient } from '../utils/is'
+import { isClient, toRef, toValue } from '../utils'
 
 const defaultDocument = isClient ? window.document : undefined
 
@@ -47,7 +46,6 @@ export function useTitle(
 /**
  * Reactive document title.
  *
- * @see https://vueuse.org/useTitle
  * @param newTitle
  * @param options
  */
