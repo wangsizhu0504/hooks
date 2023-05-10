@@ -1,0 +1,38 @@
+{
+  "name": "@kriszu/hooks",
+  "version": "0.0.1",
+  "description": "Collection of essential Vue Composition Utilities",
+  "author": "Kriszu <wangsizhu0504@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/wangsizhu0504/hooks#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangsizhu0504/hooks.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/wangsizhu0504/hooks/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "vue",
+    "hooks",
+    "utils"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./index.cjs",
+      "import": "./index.mjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./index.cjs",
+  "module": "./index.mjs",
+  "unpkg": "./index.min.js",
+  "jsdelivr": "./index.min.js",
+  "types": "./index.d.ts"
+}

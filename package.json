@@ -1,0 +1,57 @@
+{
+  "private": true,
+  "packageManager": "pnpm@8.5.0",
+  "version": "0.0.1",
+  "author": "Kriszu <wangsizhu0504@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "commit": "czg",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest",
+    "prepare": "husky install",
+    "type:check": "vue-tsc --noEmit --skipLibCheck"
+  },
+  "peerDependencies": {
+    "vue": ">=3.2.47"
+  },
+  "devDependencies": {
+    "@kriszu/eslint-config": "^1.0.11",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@types/fs-extra": "^11.0.1",
+    "@vitest/coverage-c8": "^0.30.1",
+    "@vitest/ui": "^0.30.1",
+    "@kriszu/hooks": "workspace:*",
+    "axios": "^1.4.0",
+    "consola": "^3.1.0",
+    "esbuild-register": "^3.4.2",
+    "eslint": "^8.39.0",
+    "esno": "^0.16.3",
+    "fast-glob": "^3.2.12",
+    "fs-extra": "^11.1.1",
+    "jsdom": "^21.1.2",
+    "lint-staged": "^13.2.2",
+    "pnpm": "^8.3.1",
+    "rimraf": "^5.0.0",
+    "rollup": "^3.21.2",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "rollup-plugin-pure": "^0.0.2",
+    "simple-git": "^3.18.0",
+    "simple-git-hooks": "^2.8.1",
+    "typescript": "5.0.4",
+    "vite": "^4.3.3",
+    "vitepress": "1.0.0-alpha.75",
+    "vitest": "^0.30.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "eslint --cache --fix"
+    ]
+  }
+}
