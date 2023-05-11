@@ -3,7 +3,7 @@ import type { AnyFn, MaybeRefOrGetter, Stoppable } from '../types'
 
 import { isClient, toValue, tryOnScopeDispose } from '../utils'
 
-export interface UseTimeoutFnOptions {
+export interface UseTimeoutOptions {
   /**
    * Start the timer immediate after calling this function
    *
@@ -22,7 +22,7 @@ export interface UseTimeoutFnOptions {
 export function useTimeout<CallbackFn extends AnyFn>(
   cb: CallbackFn,
   interval: MaybeRefOrGetter<number>,
-  options: UseTimeoutFnOptions = {},
+  options: UseTimeoutOptions = {},
 ): Stoppable<Parameters<CallbackFn> | []> {
   const {
     immediate = true,

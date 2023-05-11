@@ -1,13 +1,13 @@
 import { ref } from 'vue-demi'
 import { describe, expect, it, vi } from 'vitest'
 import { promiseTimeout } from '../utils'
-import { useTimeoutFn } from '.'
+import { useTimeout } from '.'
 
-describe('useTimeoutFn', () => {
+describe('useTimeout', () => {
   it('supports reactive intervals', async () => {
     const callback = vi.fn()
     const interval = ref(0)
-    const { start } = useTimeoutFn(callback, interval)
+    const { start } = useTimeout(callback, interval)
 
     start()
     await promiseTimeout(1)
@@ -25,7 +25,7 @@ describe('useTimeoutFn', () => {
 
   it('supports getting pending status', async () => {
     const callback = vi.fn()
-    const { start, isPending } = useTimeoutFn(callback, 0, { immediate: false })
+    const { start, isPending } = useTimeout(callback, 0, { immediate: false })
 
     expect(isPending.value).toBe(false)
     expect(callback).not.toBeCalled()
