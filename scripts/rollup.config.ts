@@ -6,12 +6,10 @@ import dts from 'rollup-plugin-dts'
 import json from '@rollup/plugin-json'
 import { PluginPure as pure } from 'rollup-plugin-pure'
 import type { OutputOptions, Plugin, RollupOptions } from 'rollup'
+import { packages } from './packages'
 
 const VUE_DEMI_IIFE = fs.readFileSync(require.resolve('vue-demi/lib/index.iife.js'), 'utf-8')
 const configs: RollupOptions[] = []
-const packages = fs
-  .readdirSync(path.resolve(__dirname, '../packages'))
-  .filter(p => !p.endsWith('.ts') && !p.startsWith('.'))
 
 const injectVueDemi: Plugin = {
   name: 'inject-vue-demi',

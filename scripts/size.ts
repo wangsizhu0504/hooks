@@ -4,15 +4,12 @@ import { getExportsSize } from 'export-size'
 import filesize from 'filesize'
 import fs from 'fs-extra'
 import { version } from '../package.json'
+import { packages } from './packages'
 
 async function run() {
   // made shared library imported can resolve correctly
   const packagesRoot = resolve(__dirname, '..', 'packages')
   await fs.writeFile(join(packagesRoot, 'core/index.mjs'), 'export * from "./dist/index.mjs"', 'utf-8')
-
-  const packages = fs
-    .readdirSync(resolve(__dirname, '../packages'))
-    .filter(p => !p.includes('.'))
 
   let md = '# Export size\n\n'
   const mdJSON = <{ [name: string]: string }>{}

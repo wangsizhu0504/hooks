@@ -6,16 +6,13 @@ import { consola } from 'consola'
 import semver from 'semver'
 import minimist from 'minimist'
 import enquirer from 'enquirer'
+import { packages } from './packages'
 
 const { prompt } = enquirer
 const args = minimist(process.argv.slice(2))
 const currentVersion = createRequire(import.meta.url)('../package.json').version
 const preId = args.preid || semver.prerelease(currentVersion)?.[0]
 const getPkgRoot = pkg => path.resolve(__dirname, `../packages/${pkg}`)
-
-const packages = fs
-  .readdirSync(path.resolve(__dirname, '../packages'))
-  .filter(p => !p.endsWith('.ts') && !p.endsWith('.json') && !p.endsWith('.md') && !p.startsWith('.'))
 
 const versionIncrements = [
   'patch',
@@ -102,7 +99,7 @@ async function publishPackage(pkgName, version) {
   const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'))
   if (pkg.private)
     return
-
+  let command = 'npm publish --access public'
   let releaseTag: string | null = null
   if (args.tag)
     releaseTag = args.tag
@@ -113,23 +110,13 @@ async function publishPackage(pkgName, version) {
   else if (version.includes('rc'))
     releaseTag = 'rc'
 
+  if (releaseTag) {
+    command += ' --tag ' + releaseTag
+  }
   try {
-    execSync(
-      [
-        'pnpm publish',
-        ...(releaseTag ? ['--tag', releaseTag] : []),
-        '--access',
-        'public',
-        '--no-git-checks',
-      ].join(' '),
-      {
-        cwd: pkgRoot,
-        stdio: 'pipe',
-      },
-    )
+    execSync(command, { stdio: 'inherit', cwd: path.join('packages', pkgName, 'dist') })
     consola.success(`Successfully published ${pkgName}@${version}`)
   } catch (e) {
-    console.log(JSON.stringify(e))
     if (e.stderr?.match(/previously published/))
       consola.info(`Skipping already published: ${pkgName}`)
     else

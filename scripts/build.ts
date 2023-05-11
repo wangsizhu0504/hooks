@@ -1,11 +1,39 @@
 import assert from 'node:assert'
+import path from 'node:path'
+
+import fs from 'fs-extra'
+import fg from 'fast-glob'
+
 import { execSync as exec } from 'node:child_process'
 import { consola } from 'consola'
+import { packages } from './packages'
 
 const watch = process.argv.includes('--watch')
-
+const rootDir = path.resolve(__dirname, '..')
 assert(process.cwd() !== __dirname)
+const FILES_COPY_ROOT = [
+  'LICENSE',
+]
+const FILES_COPY_LOCAL = [
+  'README.md',
+  'index.json',
+  '*.cjs',
+  '*.mjs',
+  '*.d.ts',
+]
 
+async function coptFile() {
+  for (const pkgName of packages) {
+    const packageRoot = path.resolve(rootDir, 'packages', pkgName)
+    const packageDist = path.resolve(packageRoot, 'dist')
+    for (const file of FILES_COPY_ROOT)
+      await fs.copyFile(path.join(rootDir, file), path.join(packageDist, file))
+
+      const files = await fg(FILES_COPY_LOCAL, { cwd: packageRoot })
+      for (const file of files)
+        await fs.copyFile(path.join(packageRoot, file), path.join(packageDist, file))
+  }
+}
 async function build() {
   consola.info('Clean up')
   exec('pnpm run clean', { stdio: 'inherit' })
@@ -15,6 +43,9 @@ async function build() {
 
   consola.info('Fix types')
   exec('pnpm run types:fix', { stdio: 'inherit' })
+
+  coptFile()
+
 }
 
 async function cli() {
