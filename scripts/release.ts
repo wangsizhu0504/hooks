@@ -69,12 +69,10 @@ async function main() {
     await publishPackage(pkg, targetVersion)
 
   // push to GitHub
-  if (!args.skipGit) {
-    consola.info('Pushing to GitHub...')
-    execSync('git add .', { stdio: 'inherit' })
-    execSync(`git commit -m "chore: release v${targetVersion}"`, { stdio: 'inherit' })
-    execSync(`git tag -a v${targetVersion} -m "v${targetVersion}"`, { stdio: 'inherit' })
-  }
+  consola.info('Pushing to GitHub...')
+  execSync('git add .', { stdio: 'inherit' })
+  execSync(`git commit -m "chore: release v${targetVersion}"`, { stdio: 'inherit' })
+  execSync(`git tag -a v${targetVersion} -m "v${targetVersion}"`, { stdio: 'inherit' })
 }
 
 function updatePackage(pkgRoot, version) {
