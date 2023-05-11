@@ -1,3 +1,12 @@
+## [0.0.3](https://github.com/wangsizhu0504/hooks/compare/v0.0.2...v0.0.3) (2023-05-11)
+
+
+### Bug Fixes
+
+* build tools ([2f64c5e](https://github.com/wangsizhu0504/hooks/commit/2f64c5e45cdb7635a44ce21fad2a947a2f37da84))
+
+
+
 ## 0.0.2 (2023-05-11)
 
 
