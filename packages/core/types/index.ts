@@ -51,3 +51,20 @@ export interface Stoppable<StartFnArgs extends any[] = any[]> {
    */
   start: (...args: StartFnArgs) => void
 }
+
+export interface Pausable {
+  /**
+   * A ref indicate whether a pausable instance is active
+   */
+  isActive: Readonly<Ref<boolean>>
+
+  /**
+   * Temporary pause the effect from executing
+   */
+  pause: Fn
+
+  /**
+   * Resume the effects
+   */
+  resume: Fn
+}

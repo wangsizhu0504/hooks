@@ -1,10 +1,10 @@
 import assert from 'node:assert'
 import path from 'node:path'
 
+import { execSync as exec } from 'node:child_process'
 import fs from 'fs-extra'
 import fg from 'fast-glob'
 
-import { execSync as exec } from 'node:child_process'
 import { consola } from 'consola'
 import { packages } from './packages'
 
@@ -20,7 +20,7 @@ const FILES_COPY_LOCAL = [
   '*.cjs',
   '*.mjs',
   '*.d.ts',
-  'package.json'
+  'package.json',
 ]
 
 async function coptFile() {
@@ -34,7 +34,6 @@ async function coptFile() {
     const files = await fg(FILES_COPY_LOCAL, { cwd: packageRoot })
     for (const file of files)
       await fs.copyFile(path.join(packageRoot, file), path.join(packageDist, file))
-
   }
 }
 async function build() {
@@ -48,7 +47,6 @@ async function build() {
   exec('pnpm run types:fix', { stdio: 'inherit' })
 
   coptFile()
-
 }
 
 async function cli() {

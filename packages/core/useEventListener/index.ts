@@ -3,9 +3,8 @@ import type { Arrayable, Fn, MaybeRefOrGetter } from '../types'
 
 import type { MaybeElementRef } from '../unrefElement'
 import { unrefElement } from '../unrefElement'
-import { isClient, noop, toValue, tryOnScopeDispose } from '../utils'
-
-const defaultWindow = isClient ? window : undefined
+import { noop, toValue, tryOnScopeDispose } from '../utils'
+import { defaultWindow } from '../_configurable'
 
 interface InferEventTarget<Events> {
   addEventListener(event: Events, fn?: any, options?: any): any

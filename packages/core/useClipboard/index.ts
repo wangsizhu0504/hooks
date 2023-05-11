@@ -1,14 +1,12 @@
-/* this implementation is original ported from https://github.com/logaretm/vue-use-web by Abdelrahman Awad */
-
 import type { ComputedRef, Ref } from 'vue-demi'
 import { computed, ref } from 'vue-demi'
 import { useTimeout } from '../useTimeout'
-import { isClient, toValue } from '../utils'
+import { toValue } from '../utils'
 import type { MaybeRefOrGetter } from '../types'
 import type { WindowEventName } from '../useEventListener'
 import { useEventListener } from '../useEventListener'
+import { defaultNavigator } from '../_configurable'
 
-const defaultNavigator = isClient ? window.navigator : undefined
 export interface UseClipboardOptions<Source> {
   /*
    * Specify a custom `navigator` instance, e.g. working with iframes or in testing environments.

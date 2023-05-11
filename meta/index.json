@@ -1,0 +1,106 @@
+{
+  "packages": {
+    "core": {
+      "name": "core",
+      "display": "core",
+      "dir": "packages/core"
+    }
+  },
+  "categories": [
+    "Animation",
+    "Browser",
+    "Elements",
+    "state",
+    "Time",
+    "Utilities"
+  ],
+  "functions": [
+    {
+      "name": "toRef",
+      "package": "core",
+      "lastUpdated": 1683732832000,
+      "internal": true
+    },
+    {
+      "name": "types",
+      "package": "core",
+      "lastUpdated": 1683732832000,
+      "internal": true
+    },
+    {
+      "name": "unrefElement",
+      "package": "core",
+      "lastUpdated": 1683730168000,
+      "internal": true
+    },
+    {
+      "name": "useClipboard",
+      "package": "core",
+      "lastUpdated": 1683732832000,
+      "category": "Browser",
+      "description": "reactive [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)"
+    },
+    {
+      "name": "useContext",
+      "package": "core",
+      "lastUpdated": 1683789898000,
+      "category": "state",
+      "description": "component passing using inject"
+    },
+    {
+      "name": "useEventListener",
+      "package": "core",
+      "lastUpdated": 1683732832000,
+      "category": "Browser",
+      "description": "use EventListener with ease"
+    },
+    {
+      "name": "useMutationObserver",
+      "package": "core",
+      "lastUpdated": 1683731108000,
+      "category": "Elements",
+      "description": "watch for changes being made to the DOM tree"
+    },
+    {
+      "name": "useNow",
+      "package": "core",
+      "lastUpdated": 0,
+      "category": "Time",
+      "description": "reactive current Date instance"
+    },
+    {
+      "name": "useState",
+      "package": "core",
+      "lastUpdated": 1683727082000,
+      "category": "Utilities",
+      "description": "implementation of useState in React"
+    },
+    {
+      "name": "useTimeAgo",
+      "package": "core",
+      "lastUpdated": 0,
+      "category": "Time",
+      "description": "reactive time ago"
+    },
+    {
+      "name": "useTimeout",
+      "package": "core",
+      "lastUpdated": 1683775115000,
+      "category": "Animation",
+      "description": "wrapper for `setTimeout` with controls"
+    },
+    {
+      "name": "useTitle",
+      "package": "core",
+      "lastUpdated": 1683732832000,
+      "category": "Browser",
+      "description": "reactive document title"
+    },
+    {
+      "name": "utils",
+      "package": "core",
+      "lastUpdated": 1683732832000,
+      "internal": true
+    }
+  ]
+}

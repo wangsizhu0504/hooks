@@ -2,15 +2,9 @@ import { computed, watch } from 'vue-demi'
 import { tryOnScopeDispose } from '../utils'
 import type { MaybeElementRef } from '../unrefElement'
 import { unrefElement } from '../unrefElement'
-import { isClient } from '../utils/is'
+import { defaultWindow } from '../_configurable'
+import type { ConfigurableWindow } from '../_configurable'
 
-export const defaultWindow = isClient ? window : undefined
-export interface ConfigurableWindow {
-  /*
-   * Specify a custom `window` instance, e.g. working with iframes or in testing environments.
-   */
-  window?: Window
-}
 export interface UseMutationObserverOptions extends MutationObserverInit, ConfigurableWindow { }
 
 /**

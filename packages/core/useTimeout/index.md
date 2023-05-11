@@ -1,5 +1,5 @@
 ---
-category: Animation
+category: Time
 ---
 
 # useTimeoutFn

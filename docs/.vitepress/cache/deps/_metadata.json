@@ -1,0 +1,25 @@
+{
+  "hash": "325543c7",
+  "browserHash": "1925f0ac",
+  "optimized": {
+    "fuse.js": {
+      "src": "../../../../node_modules/.pnpm/fuse.js@6.6.2/node_modules/fuse.js/dist/fuse.esm.js",
+      "file": "fuse__js.js",
+      "fileHash": "d9b678d7",
+      "needsInterop": false
+    },
+    "vue": {
+      "src": "../../../../node_modules/.pnpm/vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "1e2654e0",
+      "needsInterop": false
+    },
+    "@vueuse/shared": {
+      "src": "../../../../node_modules/.pnpm/@vueuse+shared@10.1.2_vue@3.2.47/node_modules/@vueuse/shared/index.mjs",
+      "file": "@vueuse_shared.js",
+      "fileHash": "8730f937",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}
