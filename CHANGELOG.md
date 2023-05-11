@@ -1,3 +1,12 @@
+## [0.0.4](https://github.com/wangsizhu0504/hooks/compare/v0.0.3...v0.0.4) (2023-05-11)
+
+
+### Features
+
+* add useContext ([8d6aed0](https://github.com/wangsizhu0504/hooks/commit/8d6aed08af022053992f22d40b877943b57c7b77))
+
+
+
 ## [0.0.3](https://github.com/wangsizhu0504/hooks/compare/v0.0.2...v0.0.3) (2023-05-11)
 
 
