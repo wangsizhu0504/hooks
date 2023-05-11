@@ -57,12 +57,12 @@ async function main() {
 
   if (!confirmRelease) return
   updateVersions(targetVersion)
+  // test build
+  execSync('npm run build', { stdio: 'inherit' })
   // generate changelog
   consola.info('Generating changelog...')
-
   execSync('pnpm run changelog', { stdio: 'inherit' })
 
-  execSync('npm run build:types', { stdio: 'inherit' })
   // publish packages
   consola.info('Publishing packages...')
   for (const pkg of packages)

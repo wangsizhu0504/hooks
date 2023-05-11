@@ -13,25 +13,28 @@ const rootDir = path.resolve(__dirname, '..')
 assert(process.cwd() !== __dirname)
 const FILES_COPY_ROOT = [
   'LICENSE',
+  'README.md',
 ]
 const FILES_COPY_LOCAL = [
-  'README.md',
   'index.json',
   '*.cjs',
   '*.mjs',
   '*.d.ts',
+  'package.json'
 ]
 
 async function coptFile() {
   for (const pkgName of packages) {
     const packageRoot = path.resolve(rootDir, 'packages', pkgName)
     const packageDist = path.resolve(packageRoot, 'dist')
+
     for (const file of FILES_COPY_ROOT)
       await fs.copyFile(path.join(rootDir, file), path.join(packageDist, file))
 
-      const files = await fg(FILES_COPY_LOCAL, { cwd: packageRoot })
-      for (const file of files)
-        await fs.copyFile(path.join(packageRoot, file), path.join(packageDist, file))
+    const files = await fg(FILES_COPY_LOCAL, { cwd: packageRoot })
+    for (const file of files)
+      await fs.copyFile(path.join(packageRoot, file), path.join(packageDist, file))
+
   }
 }
 async function build() {
