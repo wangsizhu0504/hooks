@@ -63,7 +63,7 @@ async function main() {
   // generate changelog
   consola.info('Generating changelog...')
 
-  execSync('pnpm run changelog', { stdio: 'inherit' })
+  // execSync('pnpm run changelog', { stdio: 'inherit' })
 
   execSync('npm run build:types', { stdio: 'inherit' })
   // publish packages
@@ -128,9 +128,6 @@ async function publishPackage(pkgName, version) {
     )
     consola.success(`Successfully published ${pkgName}@${version}`)
   } catch (e) {
-    if (e.stderr?.match(/previously published/))
-      consola.info(`Skipping already published: ${pkgName}`)
-    else
       throw e
   }
 }
