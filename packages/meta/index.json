@@ -1,0 +1,151 @@
+{
+  "packages": {
+    "core": {
+      "name": "core",
+      "display": "core",
+      "dir": "packages/core"
+    }
+  },
+  "categories": [
+    "Animation",
+    "Brower",
+    "Browser",
+    "Elements",
+    "Sensors",
+    "state",
+    "Time",
+    "Utilities",
+    "Watch"
+  ],
+  "functions": [
+    {
+      "name": "onStartTyping",
+      "package": "core",
+      "lastUpdated": 0,
+      "category": "Sensors",
+      "description": "fires when users start typing on non-editable elements"
+    },
+    {
+      "name": "toRef",
+      "package": "core",
+      "lastUpdated": 1683732832000,
+      "internal": true
+    },
+    {
+      "name": "types",
+      "package": "core",
+      "lastUpdated": 1683817853000,
+      "internal": true
+    },
+    {
+      "name": "unrefElement",
+      "package": "core",
+      "lastUpdated": 1683730168000,
+      "internal": true
+    },
+    {
+      "name": "useClipboard",
+      "package": "core",
+      "lastUpdated": 1683817853000,
+      "category": "Browser",
+      "description": "reactive [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)"
+    },
+    {
+      "name": "useContext",
+      "package": "core",
+      "lastUpdated": 1683789898000,
+      "category": "state",
+      "description": "component passing using inject"
+    },
+    {
+      "name": "useEventListener",
+      "package": "core",
+      "lastUpdated": 1683817853000,
+      "category": "Browser",
+      "description": "use EventListener with ease"
+    },
+    {
+      "name": "useInViewport",
+      "package": "core",
+      "lastUpdated": 1683877159000,
+      "category": "Brower",
+      "description": "observe whether the element is in the visible area"
+    },
+    {
+      "name": "useMutationObserver",
+      "package": "core",
+      "lastUpdated": 1683817853000,
+      "category": "Elements",
+      "description": "watch for changes being made to the DOM tree"
+    },
+    {
+      "name": "useNow",
+      "package": "core",
+      "lastUpdated": 1683817853000,
+      "category": "Time",
+      "description": "reactive current Date instance"
+    },
+    {
+      "name": "useRaf",
+      "package": "core",
+      "lastUpdated": 1683817853000,
+      "category": "Animation",
+      "description": "call function on every `requestAnimationFrame`"
+    },
+    {
+      "name": "useState",
+      "package": "core",
+      "lastUpdated": 1683727082000,
+      "category": "Utilities",
+      "description": "implementation of useState in React"
+    },
+    {
+      "name": "useTimeAgo",
+      "package": "core",
+      "lastUpdated": 1683817853000,
+      "category": "Time",
+      "description": "reactive time ago"
+    },
+    {
+      "name": "useTimeout",
+      "package": "core",
+      "lastUpdated": 1683775115000,
+      "category": "Time",
+      "description": "wrapper for `setTimeout` with controls"
+    },
+    {
+      "name": "useTitle",
+      "package": "core",
+      "lastUpdated": 1683732832000,
+      "category": "Browser",
+      "description": "reactive document title"
+    },
+    {
+      "name": "useUrlParams",
+      "package": "core",
+      "lastUpdated": 1683817853000,
+      "category": "Browser",
+      "description": "reactive [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams)"
+    },
+    {
+      "name": "utils",
+      "package": "core",
+      "lastUpdated": 1683732832000,
+      "internal": true
+    },
+    {
+      "name": "watchPausable",
+      "package": "core",
+      "lastUpdated": 0,
+      "category": "Watch",
+      "description": "pausable watch"
+    },
+    {
+      "name": "watchWithFilter",
+      "package": "core",
+      "lastUpdated": 0,
+      "category": "Watch",
+      "description": "`watch` with additional EventFilter control"
+    }
+  ]
+}

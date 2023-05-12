@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useTimeAgo } from '@vueuse/core'
+import { useTimeAgo } from '@kriszu/hooks'
 
 const timestamp = () => +Date.now()
 

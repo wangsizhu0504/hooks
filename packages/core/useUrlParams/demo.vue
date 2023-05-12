@@ -3,7 +3,7 @@ import { useUrlParams } from '@kriszu/hooks'
 
 const params = useUrlParams('history')
 params.foo = 'bar'
-params.vueuse = 'awesome'
+params.name = 'awesome'
 </script>
 
 <template>

@@ -1,8 +1,8 @@
-import { useIntervalFn } from '@vueuse/shared'
 import type { Ref } from 'vue-demi'
 import { ref } from 'vue-demi'
+import { useInterval } from '../useInterval'
 import type { Pausable } from '../types'
-import { useRafFn } from '../useRafFn'
+import { useRaf } from '../useRaf'
 
 export interface UseNowOptions<Controls extends boolean> {
   /**
@@ -38,8 +38,8 @@ export function useNow(options: UseNowOptions<boolean> = {}) {
   const update = () => now.value = new Date()
 
   const controls: Pausable = interval === 'requestAnimationFrame'
-    ? useRafFn(update, { immediate: true })
-    : useIntervalFn(update, interval, { immediate: true })
+    ? useRaf(update, { immediate: true })
+    : useInterval(update, interval, { immediate: true })
 
   if (exposeControls) {
     return {

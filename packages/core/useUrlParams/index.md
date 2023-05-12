@@ -16,8 +16,8 @@ const params = useUrlParams('history')
 console.log(params.foo) // 'bar'
 
 params.foo = 'bar'
-params.vueuse = 'awesome'
-// url updated to `?foo=bar&vueuse=awesome`
+params.name = 'awesome'
+// url updated to `?foo=bar&name=awesome`
 ```
 
 ### Hash Mode
@@ -30,8 +30,8 @@ import { useUrlParams } from '@kriszu/hooks'
 const params = useUrlParams('hash')
 
 params.foo = 'bar'
-params.vueuse = 'awesome'
-// url updated to `#/your/route?foo=bar&vueuse=awesome`
+params.name = 'awesome'
+// url updated to `#/your/route?foo=bar&name=awesome`
 ```
 
 ### Hash Params
@@ -44,6 +44,6 @@ import { useUrlParams } from '@kriszu/hooks'
 const params = useUrlParams('hash-params')
 
 params.foo = 'bar'
-params.vueuse = 'awesome'
-// url updated to `/your/route#foo=bar&vueuse=awesome`
+params.name = 'awesome'
+// url updated to `/your/route#foo=bar&name=awesome`
 ```

@@ -177,3 +177,4 @@ yarn.lock
 # End of https://www.toptal.com/developers/gitignore/api/macos,vue,react,node
 
 types
+*/.vitepress/cache

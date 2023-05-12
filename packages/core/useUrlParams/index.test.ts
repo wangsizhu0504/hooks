@@ -1,9 +1,9 @@
 import { isVue3, nextTick } from 'vue-demi'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { useUrlSearchParams } from '.'
+import { useUrlParams } from '.'
 
-describe('useUrlSearchParams', () => {
-  const baseURL = 'https://vueuse.org'
+describe('useUrlParams', () => {
+  const baseURL = 'https://hooks.sizhu.wang'
 
   Object.defineProperty(window, 'location', {
     value: new URL(baseURL),
@@ -45,7 +45,7 @@ describe('useUrlSearchParams', () => {
         else
           window.location.search = '?foo=bar'
 
-        const params = useUrlSearchParams(mode)
+        const params = useUrlParams(mode)
 
         await nextTick()
         expect(params.foo).toBe('bar')
@@ -53,16 +53,16 @@ describe('useUrlSearchParams', () => {
 
       it('return initialValue', async () => {
         const initialValue = { foo: 'bar' }
-        const params1 = useUrlSearchParams(mode, { initialValue })
+        const params1 = useUrlParams(mode, { initialValue })
         // @ts-expect-error test window=null
-        const params2 = useUrlSearchParams(mode, { initialValue, window: null })
+        const params2 = useUrlParams(mode, { initialValue, window: null })
 
         expect(params1.foo).toBe('bar')
         expect(params2.foo).toBe('bar')
       })
 
       it('update params on poststate event', async () => {
-        const params = useUrlSearchParams(mode)
+        const params = useUrlParams(mode)
         expect(params.foo).toBeUndefined()
 
         switch (mode) {
@@ -106,7 +106,7 @@ describe('useUrlSearchParams', () => {
       })
 
       it('stop poststate event', async () => {
-        const params = useUrlSearchParams(mode, { write: false })
+        const params = useUrlParams(mode, { write: false })
         expect(params.foo).toBeUndefined()
 
         switch (mode) {
@@ -125,7 +125,7 @@ describe('useUrlSearchParams', () => {
 
       if (isVue3) {
         it('update browser location on params change', async () => {
-          const params = useUrlSearchParams(mode)
+          const params = useUrlParams(mode)
 
           params.foo = 'bar'
           await nextTick()
@@ -160,7 +160,7 @@ describe('useUrlSearchParams', () => {
         })
 
         it('array url search param', async () => {
-          const params = useUrlSearchParams(mode)
+          const params = useUrlParams(mode)
           expect(params.foo).toBeUndefined()
           params.foo = ['bar1', 'bar2']
 
@@ -184,7 +184,7 @@ describe('useUrlSearchParams', () => {
           customFoo: number | undefined
         }
 
-        const params = useUrlSearchParams<CustomUrlParams>(mode)
+        const params = useUrlParams<CustomUrlParams>(mode)
         expect(params.customFoo).toBeUndefined()
 
         params.customFoo = 42
@@ -193,7 +193,7 @@ describe('useUrlSearchParams', () => {
       })
 
       it('should remove null & falsy', async () => {
-        const params = useUrlSearchParams(mode, {
+        const params = useUrlParams(mode, {
           removeNullishValues: true,
           removeFalsyValues: true,
           initialValue: {
@@ -211,7 +211,7 @@ describe('useUrlSearchParams', () => {
 
   it('hash url without params', () => {
     window.location.hash = '#/test/'
-    const params = useUrlSearchParams('hash')
+    const params = useUrlParams('hash')
     expect(params).toEqual({})
 
     const newHash = '#/change/?foo=bar'

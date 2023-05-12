@@ -7,7 +7,7 @@ import type { HookFunction, HookPackage, PackageIndexes } from '../type'
 import { getCategories } from './utils'
 import { packages } from './packages'
 
-export const DIR_PACKAGE = resolve(__dirname, '../meta')
+export const DIR_PACKAGE = resolve(__dirname, '../packages/meta')
 export const DIR_ROOT = resolve(__dirname, '../')
 export const DIR_SRC = resolve(DIR_ROOT, 'packages')
 export const DIR_TYPES = resolve(DIR_ROOT, 'types/packages')

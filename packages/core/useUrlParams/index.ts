@@ -1,7 +1,7 @@
 import { reactive } from 'vue-demi'
-import { pausableWatch } from '@vueuse/shared'
+import { watchPausable } from '../watchPausable'
 import { useEventListener } from '../useEventListener'
-import type { ConfigurableWindow } from '../types'
+import type { ConfigurableWindow } from '../_configurable'
 import { defaultWindow } from '../_configurable'
 
 export type UrlParams = Record<string, string[] | string>
@@ -95,7 +95,7 @@ export function useUrlParams<T extends Record<string, any> = UrlParams>(
     Array.from(unusedKeys).forEach(key => delete state[key])
   }
 
-  const { pause, resume } = pausableWatch(
+  const { pause, resume } = watchPausable(
     state,
     () => {
       const params = new URLSearchParams('')
