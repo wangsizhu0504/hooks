@@ -180,9 +180,7 @@
   background: var(--vp-c-bg);
 }
 
-html.dark .demo {
-  .resizer {
-    background: #222;
-    color: white;
-  }
+html.dark .demo .resizer{
+  background: #222;
+  color: white;
 }
