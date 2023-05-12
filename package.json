@@ -12,7 +12,7 @@
     "build:redirects": "esno scripts/redirects.ts",
     "clean": "rimraf dist types \"packages/*/dist\"",
     "docs": "vue-demi-switch 3 && vitepress dev packages --open",
-    "docs:build": "vitepress build packages && nr build:redirects ",
+    "docs:build": "vitepress build packages && npm run build:redirects ",
     "docs:serve": "vitepress serve packages",
     "install-fonts": "gfi install Inter && gfi install Fira Code",
     "size": "esno scripts/size.ts",
