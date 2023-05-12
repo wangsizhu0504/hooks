@@ -1,23 +1,29 @@
 {
-  "hash": "325543c7",
-  "browserHash": "1925f0ac",
+  "hash": "4315afa1",
+  "browserHash": "40cae61a",
   "optimized": {
     "fuse.js": {
       "src": "../../../../node_modules/.pnpm/fuse.js@6.6.2/node_modules/fuse.js/dist/fuse.esm.js",
       "file": "fuse__js.js",
-      "fileHash": "d9b678d7",
+      "fileHash": "797ae32d",
       "needsInterop": false
     },
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "1e2654e0",
+      "fileHash": "90b1eac3",
+      "needsInterop": false
+    },
+    "typeit": {
+      "src": "../../../../node_modules/.pnpm/typeit@8.7.1/node_modules/typeit/dist/index.es.js",
+      "file": "typeit.js",
+      "fileHash": "36b671e3",
       "needsInterop": false
     },
     "@vueuse/shared": {
       "src": "../../../../node_modules/.pnpm/@vueuse+shared@10.1.2_vue@3.2.47/node_modules/@vueuse/shared/index.mjs",
       "file": "@vueuse_shared.js",
-      "fileHash": "8730f937",
+      "fileHash": "a8e0a6e0",
       "needsInterop": false
     }
   },

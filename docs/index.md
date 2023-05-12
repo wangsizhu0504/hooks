@@ -9,9 +9,10 @@ hero:
     src: /favicon.svg
     alt: '@kriszu/hooks'
   actions:
-    - theme: alt
+    - theme: brand
       text: Functions
       link: /functions
+
     - theme: alt
       text: View on GitHub
       link: https://github.com/wangsizhu0504/hooks
@@ -29,3 +30,11 @@ features:
     details: Written in TypeScript with predictable static types
     icon: 🎯
 ---
+
+<div class="font-700 text-center my-7 dark:text-white text-black text-[20px]">Useage</div>
+
+<DemoEditor>
+  <div class="text-[#9d9da0] my-2" >
+    // Demo.vue
+  </div>
+</DemoEditor>

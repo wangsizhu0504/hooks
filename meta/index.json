@@ -8,6 +8,7 @@
   },
   "categories": [
     "Animation",
+    "Brower",
     "Browser",
     "Elements",
     "state",
@@ -24,7 +25,7 @@
     {
       "name": "types",
       "package": "core",
-      "lastUpdated": 1683732832000,
+      "lastUpdated": 1683817853000,
       "internal": true
     },
     {
@@ -36,7 +37,7 @@
     {
       "name": "useClipboard",
       "package": "core",
-      "lastUpdated": 1683732832000,
+      "lastUpdated": 1683817853000,
       "category": "Browser",
       "description": "reactive [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)"
     },
@@ -50,23 +51,37 @@
     {
       "name": "useEventListener",
       "package": "core",
-      "lastUpdated": 1683732832000,
+      "lastUpdated": 1683817853000,
       "category": "Browser",
       "description": "use EventListener with ease"
     },
     {
+      "name": "useInViewport",
+      "package": "core",
+      "lastUpdated": 0,
+      "category": "Brower",
+      "description": "observe whether the element is in the visible area"
+    },
+    {
       "name": "useMutationObserver",
       "package": "core",
-      "lastUpdated": 1683731108000,
+      "lastUpdated": 1683817853000,
       "category": "Elements",
       "description": "watch for changes being made to the DOM tree"
     },
     {
       "name": "useNow",
       "package": "core",
-      "lastUpdated": 0,
+      "lastUpdated": 1683817853000,
       "category": "Time",
       "description": "reactive current Date instance"
+    },
+    {
+      "name": "useRafFn",
+      "package": "core",
+      "lastUpdated": 1683817853000,
+      "category": "Animation",
+      "description": "call function on every `requestAnimationFrame`"
     },
     {
       "name": "useState",
@@ -78,7 +93,7 @@
     {
       "name": "useTimeAgo",
       "package": "core",
-      "lastUpdated": 0,
+      "lastUpdated": 1683817853000,
       "category": "Time",
       "description": "reactive time ago"
     },
@@ -86,7 +101,7 @@
       "name": "useTimeout",
       "package": "core",
       "lastUpdated": 1683775115000,
-      "category": "Animation",
+      "category": "Time",
       "description": "wrapper for `setTimeout` with controls"
     },
     {
@@ -95,6 +110,13 @@
       "lastUpdated": 1683732832000,
       "category": "Browser",
       "description": "reactive document title"
+    },
+    {
+      "name": "useUrlParams",
+      "package": "core",
+      "lastUpdated": 1683817853000,
+      "category": "Browser",
+      "description": "reactive [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams)"
     },
     {
       "name": "utils",

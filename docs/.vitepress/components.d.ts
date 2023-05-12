@@ -11,9 +11,11 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     BooleanDisplay: typeof import('./theme/components/BooleanDisplay.vue')['default']
     DemoContainer: typeof import('./theme/components/DemoContainer.vue')['default']
+    DemoEditor: typeof import('./theme/components/DemoEditor.vue')['default']
     FunctionBadge: typeof import('./theme/components/FunctionBadge.vue')['default']
     FunctionInfo: typeof import('./theme/components/FunctionInfo.vue')['default']
     FunctionsList: typeof import('./theme/components/FunctionsList.vue')['default']
+    IconCheck: typeof import('~icons/ic/on-check')['default']
     Note: typeof import('./theme/components/Note.vue')['default']
     ReloadPrompt: typeof import('./theme/components/ReloadPrompt.vue')['default']
     RequiresProxy: typeof import('./theme/components/RequiresProxy.vue')['default']
