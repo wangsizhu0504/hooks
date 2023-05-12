@@ -14,6 +14,7 @@
     "docs": "vue-demi-switch 3 && vitepress dev packages --open",
     "docs:build": "vitepress build packages && nr build:redirects ",
     "docs:serve": "vitepress serve packages",
+    "install-fonts": "gfi install Inter && gfi install Fira Code",
     "size": "esno scripts/size.ts",
     "commit": "czg",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
