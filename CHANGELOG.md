@@ -1,3 +1,7 @@
+## [0.0.5](https://github.com/wangsizhu0504/hooks/compare/v0.0.4...v0.0.5) (2023-05-12)
+
+
+
 ## [0.0.4](https://github.com/wangsizhu0504/hooks/compare/v0.0.3...v0.0.4) (2023-05-11)
 
 
