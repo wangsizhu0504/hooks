@@ -1,4 +1,5 @@
 export * from './onStartTyping'
+export * from './lifecycle'
 export * from './toRef'
 export * from './unrefElement'
 export * from './useClipboard'
