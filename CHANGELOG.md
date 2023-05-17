@@ -1,3 +1,12 @@
+## [0.0.6](https://github.com/wangsizhu0504/hooks/compare/v0.0.5...v0.0.6) (2023-05-17)
+
+
+### Features
+
+* useWindowSize & useMediaQuery ([e6ba162](https://github.com/wangsizhu0504/hooks/commit/e6ba1624d6f50664d1d8cde85a6b963756ee7354))
+
+
+
 ## [0.0.5](https://github.com/wangsizhu0504/hooks/compare/v0.0.4...v0.0.5) (2023-05-12)
 
 
