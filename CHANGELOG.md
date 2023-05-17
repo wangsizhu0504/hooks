@@ -1,3 +1,12 @@
+## [0.0.11](https://github.com/wangsizhu0504/hooks/compare/v0.0.10...v0.0.11) (2023-05-17)
+
+
+### Features
+
+* useThrottle ([d1aa119](https://github.com/wangsizhu0504/hooks/commit/d1aa119fc1656ba60b8a285fe52c75b12a9895ad))
+
+
+
 ## [0.0.10](https://github.com/wangsizhu0504/hooks/compare/v0.0.9...v0.0.10) (2023-05-17)
 
 

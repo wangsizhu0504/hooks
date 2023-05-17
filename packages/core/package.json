@@ -1,6 +1,6 @@
 {
   "name": "@kriszu/hooks",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Collection of essential Vue Composition Utilities",
   "author": "Kriszu <wangsizhu0504@outlook.com>",
   "license": "MIT",
