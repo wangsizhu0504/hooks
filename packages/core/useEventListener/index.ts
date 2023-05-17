@@ -1,9 +1,9 @@
-import { watch } from 'vue-demi'
+import { toValue, watch } from 'vue-demi'
 import type { Arrayable, Fn, MaybeRefOrGetter } from '../types'
 
 import type { MaybeElementRef } from '../unrefElement'
 import { unrefElement } from '../unrefElement'
-import { noop, toValue, tryOnScopeDispose } from '../utils'
+import { noop, tryOnScopeDispose } from '../utils'
 import { defaultWindow } from '../_configurable'
 
 interface InferEventTarget<Events> {

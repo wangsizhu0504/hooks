@@ -1,7 +1,6 @@
 import type { ComputedRef, Ref } from 'vue-demi'
-import { computed, ref } from 'vue-demi'
+import { computed, ref, toValue } from 'vue-demi'
 import { useTimeout } from '../useTimeout'
-import { toValue } from '../utils'
 import type { MaybeRefOrGetter } from '../types'
 import type { WindowEventName } from '../useEventListener'
 import { useEventListener } from '../useEventListener'

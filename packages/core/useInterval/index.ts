@@ -1,5 +1,5 @@
-import { isRef, ref, watch } from 'vue-demi'
-import { isClient, toValue, tryOnScopeDispose } from '../utils'
+import { isRef, ref, toValue, watch } from 'vue-demi'
+import { isClient, tryOnScopeDispose } from '../utils'
 import type { Fn, MaybeRefOrGetter, Pausable } from '../types'
 
 export interface useIntervalOptions {

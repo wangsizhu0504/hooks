@@ -1,8 +1,8 @@
 import type { ComputedRef, Ref } from 'vue-demi'
-import { watch } from 'vue-demi'
+import { toValue, watch } from 'vue-demi'
 import type { MaybeRef, MaybeRefOrGetter, ReadonlyRefOrGetter } from '../types'
 import { useMutationObserver } from '../useMutationObserver'
-import { isClient, toValue } from '../utils'
+import { isClient } from '../utils'
 import { toRef } from '../toRef'
 
 const defaultDocument = isClient ? window.document : undefined

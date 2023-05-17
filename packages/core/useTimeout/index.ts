@@ -1,7 +1,7 @@
-import { readonly, ref } from 'vue-demi'
+import { readonly, ref, toValue } from 'vue-demi'
 import type { AnyFn, MaybeRefOrGetter, Stoppable } from '../types'
 
-import { isClient, toValue, tryOnScopeDispose } from '../utils'
+import { isClient, tryOnScopeDispose } from '../utils'
 
 export interface UseTimeoutOptions {
   /**

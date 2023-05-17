@@ -1,7 +1,7 @@
 import type { ComputedRef } from 'vue-demi'
-import { computed } from 'vue-demi'
+import { computed, toValue } from 'vue-demi'
 import type { MaybeRefOrGetter, Pausable } from '../types'
-import { toValue } from '../utils'
+
 import { useNow } from '../useNow'
 
 export type UseTimeAgoFormatter<T = number> = (value: T, isPast: boolean) => string

@@ -1,5 +1,7 @@
 import type { ComputedRef, Ref, WatchSource } from 'vue-demi'
 
+export type PromisifyFn<T extends AnyFn> = (...args: ArgumentsType<T>) => Promise<ReturnType<T>>
+
 export type Arrayable<T> = T[] | T
 
 /**
