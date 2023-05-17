@@ -1,3 +1,19 @@
+## [0.0.9](https://github.com/wangsizhu0504/hooks/compare/v0.0.7...v0.0.9) (2023-05-17)
+
+
+### Bug Fixes
+
+* toValue from vue ([548efb4](https://github.com/wangsizhu0504/hooks/commit/548efb4abcde10f8cdf3eb27e369c484a47c2d4e))
+* type bug ([b2a429e](https://github.com/wangsizhu0504/hooks/commit/b2a429efbceb96283b0b64029de820bb70860c98))
+
+
+### Features
+
+* lifecycle ([6858487](https://github.com/wangsizhu0504/hooks/commit/6858487e688272fe94af71aed19154a8797948be))
+* useScrollTo ([e8c1127](https://github.com/wangsizhu0504/hooks/commit/e8c1127f03fc77bc3d5aad8d349c1ae0d93d106f))
+
+
+
 ## [0.0.8](https://github.com/wangsizhu0504/hooks/compare/v0.0.7...v0.0.8) (2023-05-17)
 
 
