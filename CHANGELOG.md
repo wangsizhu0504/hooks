@@ -1,3 +1,17 @@
+## [0.0.8](https://github.com/wangsizhu0504/hooks/compare/v0.0.7...v0.0.8) (2023-05-17)
+
+
+### Bug Fixes
+
+* toValue from vue ([548efb4](https://github.com/wangsizhu0504/hooks/commit/548efb4abcde10f8cdf3eb27e369c484a47c2d4e))
+
+
+### Features
+
+* lifecycle ([6858487](https://github.com/wangsizhu0504/hooks/commit/6858487e688272fe94af71aed19154a8797948be))
+
+
+
 ## [0.0.7](https://github.com/wangsizhu0504/hooks/compare/v0.0.6...v0.0.7) (2023-05-17)
 
 
