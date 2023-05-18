@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { onStartTyping, watchPausable } from '@kriszu/hooks'
+import { watchPausable } from '@kriszu/hooks'
 
 const input = ref<HTMLInputElement | null>()
 const log = ref('')
@@ -11,8 +11,6 @@ const watcher = watchPausable(
   source,
   v => (log.value += `Changed to "${v}"\n`),
 )
-
-onStartTyping(() => input.value?.focus())
 
 function clear() {
   log.value = ''

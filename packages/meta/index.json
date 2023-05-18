@@ -10,20 +10,20 @@
     "Animation",
     "Brower",
     "Browser",
-    "Elements",
-    "Sensors",
+    "Component",
     "state",
+    "State",
     "Time",
     "Utilities",
     "Watch"
   ],
   "functions": [
     {
-      "name": "onStartTyping",
+      "name": "lifecycle",
       "package": "core",
-      "lastUpdated": 0,
-      "category": "Sensors",
-      "description": "fires when users start typing on non-editable elements"
+      "lastUpdated": 1684329364000,
+      "category": "Utilities",
+      "description": "safe `onBeforeMount`"
     },
     {
       "name": "toRef",
@@ -34,7 +34,7 @@
     {
       "name": "types",
       "package": "core",
-      "lastUpdated": 1683817853000,
+      "lastUpdated": 1684327229000,
       "internal": true
     },
     {
@@ -46,7 +46,7 @@
     {
       "name": "useClipboard",
       "package": "core",
-      "lastUpdated": 1683817853000,
+      "lastUpdated": 1684327229000,
       "category": "Browser",
       "description": "reactive [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)"
     },
@@ -58,9 +58,16 @@
       "description": "component passing using inject"
     },
     {
+      "name": "useDebounce",
+      "package": "core",
+      "lastUpdated": 1684327229000,
+      "category": "Utilities",
+      "description": "debounce execution of a function"
+    },
+    {
       "name": "useEventListener",
       "package": "core",
-      "lastUpdated": 1683817853000,
+      "lastUpdated": 1684327229000,
       "category": "Browser",
       "description": "use EventListener with ease"
     },
@@ -72,78 +79,64 @@
       "description": "observe whether the element is in the visible area"
     },
     {
-      "name": "useMutationObserver",
-      "package": "core",
-      "lastUpdated": 1683817853000,
-      "category": "Elements",
-      "description": "watch for changes being made to the DOM tree"
-    },
-    {
-      "name": "useNow",
-      "package": "core",
-      "lastUpdated": 1683817853000,
-      "category": "Time",
-      "description": "reactive current Date instance"
-    },
-    {
       "name": "useRaf",
       "package": "core",
-      "lastUpdated": 1683817853000,
+      "lastUpdated": 1683883287000,
       "category": "Animation",
       "description": "call function on every `requestAnimationFrame`"
+    },
+    {
+      "name": "useScrollTo",
+      "package": "core",
+      "lastUpdated": 1684330433000,
+      "category": "Component",
+      "description": "scroll to an element"
     },
     {
       "name": "useState",
       "package": "core",
       "lastUpdated": 1683727082000,
-      "category": "Utilities",
+      "category": "State",
       "description": "implementation of useState in React"
     },
     {
-      "name": "useTimeAgo",
+      "name": "useThrottle",
       "package": "core",
-      "lastUpdated": 1683817853000,
-      "category": "Time",
-      "description": "reactive time ago"
+      "lastUpdated": 1684331053000,
+      "category": "Utilities",
+      "description": "throttle execution of a function"
     },
     {
       "name": "useTimeout",
       "package": "core",
-      "lastUpdated": 1683775115000,
+      "lastUpdated": 1684327229000,
       "category": "Time",
       "description": "wrapper for `setTimeout` with controls"
     },
     {
-      "name": "useTitle",
-      "package": "core",
-      "lastUpdated": 1683732832000,
-      "category": "Browser",
-      "description": "reactive document title"
-    },
-    {
       "name": "useUrlParams",
       "package": "core",
-      "lastUpdated": 1683817853000,
+      "lastUpdated": 1683883287000,
       "category": "Browser",
       "description": "reactive [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams)"
     },
     {
       "name": "utils",
       "package": "core",
-      "lastUpdated": 1683732832000,
+      "lastUpdated": 1684327229000,
       "internal": true
     },
     {
       "name": "watchPausable",
       "package": "core",
-      "lastUpdated": 0,
+      "lastUpdated": 1683883287000,
       "category": "Watch",
       "description": "pausable watch"
     },
     {
       "name": "watchWithFilter",
       "package": "core",
-      "lastUpdated": 0,
+      "lastUpdated": 1683883287000,
       "category": "Watch",
       "description": "`watch` with additional EventFilter control"
     }
