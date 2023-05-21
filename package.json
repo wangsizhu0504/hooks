@@ -64,7 +64,7 @@
     "simple-git-hooks": "^2.8.1",
     "typeit": "^8.7.1",
     "typescript": "5.0.4",
-    "unocss": "^0.51.13",
+    "unocss": "^0.52.0",
     "unplugin-icons": "^0.16.1",
     "unplugin-vue-components": "^0.24.1",
     "vite": "^4.3.7",
